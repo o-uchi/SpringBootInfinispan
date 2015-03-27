@@ -1,0 +1,27 @@
+# See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+spring:
+  thymeleaf.cache: false
+  main.show-banner: false
+  jmx:
+      enabled: false
+  jpa:
+      hibernate.ddl-auto: validate
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.H2Dialect
+          show_sql: true
+          use_sql_comments: true
+          connection.charSet: UTF-8
+          jdbc:
+            batch_size: 30
+            fetch_size: 100
+          search:
+            default:
+              directory_provider: ${hibernate.search.default.directory_provider:infinispan}
+#              indexBase: ${hibernate.search.default.indexBase:/tmp/lucene}
+#              locking_strategy: ${hibernate.search.default.locking_strategy:single}
+            infinispan.configuration_resourcename: default-hibernatesearch-infinispan.xml
+            analyzer: org.apache.lucene.analysis.ja.JapaneseAnalyzer
+            lucene_version: LUCENE_4_10_4
+  datasource:
+    url: jdbc:h2:file:${categolj2.h2.datadir:/tmp}/ouchi

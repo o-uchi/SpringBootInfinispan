@@ -1,0 +1,6 @@
+FROM dockerfile/java:oracle-java8
+
+ADD SpringBoot-Infinispan.jar /opt/SpringBoot-Infinispan/
+EXPOSE 8080
+WORKDIR /opt/SpringBoot-Infinispan/
+CMD ["java", "-Xms512m", "-Xmx1g", "-jar", "SpringBoot-Infinispan.jar"]
