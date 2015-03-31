@@ -53,31 +53,50 @@
             </exclusions>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>hibernate-search-orm</artifactId>-->
+            <!--<version>5.1.1.Final</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.apache.avro</groupId>-->
+                    <!--<artifactId>avro</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>xml-apis</groupId>-->
+                    <!--<artifactId>xml-apis</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.lucene</groupId>-->
+            <!--<artifactId>lucene-analyzers-kuromoji</artifactId>-->
+            <!--<version>4.10.4</version>-->
+        <!--</dependency>-->
+
+
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search-orm</artifactId>
-            <version>5.1.1.Final</version>
+            <groupId>org.infinispan</groupId>
+            <artifactId>infinispan-query</artifactId>
+            <version>7.1.1.Final</version>
             <exclusions>
                 <exclusion>
-                    <groupId>org.apache.avro</groupId>
-                    <artifactId>avro</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>xml-apis</groupId>
-                    <artifactId>xml-apis</artifactId>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-search-serialization-avro</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-analyzers-kuromoji</artifactId>
-            <version>4.10.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search-infinispan</artifactId>
-            <version>5.1.1.Final</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.infinispan</groupId>-->
+            <!--<artifactId>infinispan-spring</artifactId>-->
+            <!--<version>7.1.1.Final</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>commons-logging</groupId>-->
+                    <!--<artifactId>commons-logging</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.h2database</groupId>

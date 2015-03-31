@@ -18,7 +18,7 @@ public class TodoServiceImpl implements TodoService {
     private TodoRepository todoRepository;
 
     @Inject
-    private TodoSearchRepository todoSearchRepository;
+    private TodoRepository todoCache;
 
     @Override
     public List<Todo> findAll() {
@@ -28,12 +28,12 @@ public class TodoServiceImpl implements TodoService {
     @Override
     @Transactional
     public Todo create(Todo todo) {
-        return todoRepository.save(todo);
+        return todoCache.save(todo);
     }
 
     @Override
     public Todo findOne(Long todoId) {
-        return todoRepository.findOne(todoId);
+        return todoCache.findOne(todoId);
     }
 
     @Override
@@ -45,11 +45,11 @@ public class TodoServiceImpl implements TodoService {
     @Override
     @Transactional
     public void delete(Long todoId) {
-        todoRepository.delete(todoId);
+        todoCache.delete(todoId);
     }
 
     @Override
     public List<Todo> search(String keyword) {
-        return todoSearchRepository.searchTitleOrSummary(keyword);
+        return todoCache.searchTitleOrSummary(keyword);
     }
 }

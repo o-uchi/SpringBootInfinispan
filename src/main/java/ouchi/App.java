@@ -12,6 +12,7 @@ public class App {
         System.setProperty("h2.implicitRelativePath", "true");
         System.setProperty("java.net.preferIPv4Stack", "true");
         SpringApplication.run(App.class, args);
+        //System.exit(0);
     }
 
     @RequestMapping(value = "/")
